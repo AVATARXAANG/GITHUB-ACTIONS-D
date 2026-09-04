@@ -1,0 +1,32 @@
+name: myworkflow #name of the workflow
+on: #when the workflow should run
+  push:
+    branches: [main] #on the main branch
+  workflow_dispatch: #adds a button that allows manual trigger 
+
+jobs:
+  tuone: #job ID
+    runs-on: ubuntu-latest
+    steps:
+    #we print welcome message
+      - name: welcome
+        run: echo"hello github actions"
+        #we print out time and date
+      - name: show time and date
+        run: date
+        #checkout repo code
+      - name: checkout code
+        run: actions/checkout@v4
+        #explore files checked timeout-minutes
+      - name: list files
+        run: ls -la
+        #show current working-directory
+      - name: pwd
+        run: pwd
+        #runner info
+      - name: show runner info
+        run: |
+          echo"Operating system = $RUNNER_OS"
+          echo"Operating architecture = $RUNNER_ARCH"
+          echo"Runner Name = $RUNNER_NAME"
+  
