@@ -10,7 +10,7 @@ jobs:
     steps:
     #we print welcome message
       - name: welcome
-        run: echo"hello github actions"
+        run: echo "hello github actions"
         #we print out time and date
       - name: show time and date
         run: date
@@ -26,7 +26,7 @@ jobs:
         #runner info
       - name: show runner info
         run: |
-          echo"Operating system = $RUNNER_OS"
-          echo"Operating architecture = $RUNNER_ARCH"
-          echo"Runner Name = $RUNNER_NAME"
+          echo "Operating system = $RUNNER_OS"
+          echo "Operating architecture = $RUNNER_ARCH"
+          echo "Runner Name = $RUNNER_NAME"
   
