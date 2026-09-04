@@ -1,5 +1,7 @@
 name: myworkflow #name of the workflow
 on: #when the workflow should run
+  pull_request:
+    branches: [main]
   push:
     branches: [main] #on the main branch
   workflow_dispatch: #adds a button that allows manual trigger 
