@@ -16,7 +16,7 @@ jobs:
         run: date
         #checkout repo code
       - name: checkout code
-        run: actions/checkout@v4
+        uses: actions/checkout@v4
         #explore files checked timeout-minutes
       - name: list files
         run: ls -la
