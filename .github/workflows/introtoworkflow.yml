@@ -5,7 +5,7 @@ on: #when the workflow should run
   push:
     branches: [main] #on the main branch
   workflow_dispatch: #adds a button that allows manual trigger 
-
+#jobs
 jobs:
   tuone: #job ID
     runs-on: ubuntu-latest
